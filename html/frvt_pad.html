@@ -1918,15 +1918,17 @@ _setUpTrackersIfReady()||(document.addEventListener?document.addEventListener("D
 </script>
 </head>
 <hr />
-<p><font size="4"><a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_pad_api_v0.1.pdf">Draft API</a></font></p>
+<p><font size="4"><a href="https://pages.nist.gov/frvt/agreements/frvt_participation_agreement.pdf">Participation Agreement</a> | <a href="https://pages.nist.gov/frvt/api/FRVT_pad_api_v1.0.pdf">API</a> | <a href="https://github.com/usnistgov/frvt">Validation</a> | <a href="https://www.nist.gov/itl/iad/image-group/products-and-services/encrypting-softwaredata-transmission-nist">Encryption</a> </font></p>
 <details open>
 <summary>
 <h2>
 Status
 </h2>
-</summary>
-<b>[2022-03-30]</b>
-NIST is announcing a new test to evaluate facial presentation attack detection (PAD) algorithms under a new track called FRVT PAD. The FRVT PAD test will provide ongoing independent testing of software-based facial PAD detection technologies. The evaluation is designed to assess software-based PA detection capability to inform developers and current and prospective end-users. Software-based PAD solutions operate only on captured imagery. A <a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_pad_api_v0.1.pdf">draft concept of operations and application programming interface (API)</a> document for evaluation of algorithmic capability to detect presentation attack from still photographs and/or video frames is now available for public comment. Please direct any questions or comments to <a href="mailto:frvt@nist.gov">frvt@nist.gov</a> by April 26, 2022.
+<p></summary>
+<b>[2022-08-29]</b>
+A second version of the <a href="https://pages.nist.gov/frvt/api/FRVT_pad_api_v1.0.pdf">API and test plan</a> for the FRVT Presentation Attack Detection track has been posted. We are grateful to the organizations that commented on the initial 2022-03-23 draft.
+NIST will run an initial evaluation of software PAD implementations starting on November 1st, 2022 and will accept algorithm submissions between November 1st - 22nd, 2022. Developers may submit up to two PAD implementations to NIST by November 22nd, 2022. NIST will report results some weeks later. At that point, we will determine and announce whether the FRVT PAD evaluation will proceed on an ongoing basis.</p>
+<p>A validation package will be published on <a href="https://github.com/usnistgov/frvt/tree/master">GitHub</a> in the upcoming weeks. The FRVT PAD <a href="https://github.com/usnistgov/frvt/blob/pad/pad/src/include/frvt_pad.h">API header file</a> and <a href="https://github.com/usnistgov/frvt/blob/pad/common/src/include/frvt_structs.h">supporting data structures</a> are currently available under a development branch.</p>
 </details>
 <hr />
 <details open>
@@ -1944,8 +1946,61 @@ Presentation attack of face recognition systems (and the ability to detect it) i
 <h2>
 How to Participate
 </h2>
-</summary>
-Coming soon…
+<p></summary>
+To participate in this evaluation, developers need to submit a participation
+agreement to NIST, wrap their software behind the published C++ API, run their
+libraries through the provided validation package (which creates a submission
+package), encrypt the package, and provide a download link for the encrypted
+submission package. More details are provided below.</p>
+<div id="participation-agreement" class="section level3">
+<h3>Participation Agreement</h3>
+<p>All organizations who seek to participate in FRVT must sign and submit all
+pages of this <a href="https://www.nist.gov/document/frvtparticipationagreementpdf">Participation
+Agreement</a> and
+send a PDF scanned copy to <a href="mailto:frvt@nist.gov">frvt@nist.gov</a>. [NOTE:]
+Organizations that have already submitted a participation agreement for FRVT
+Ongoing 1:1 do not need to send in a new participation agreement UNLESS the
+organization updates their cryptographic signing key. [last update: 2022-08-29]</p>
+</div>
+<div id="api-document" class="section level3">
+<h3>API Document</h3>
+<p>A definitive <a href="https://pages.nist.gov/frvt/api/FRVT_pad_api_v1.0.pdf">API
+document</a> has
+All algorithms submitted must adhere to the published C++ API.
+[last update: 2022-08-29]</p>
+</div>
+<div id="validation" class="section level3">
+<h3>Validation</h3>
+<p>A <a href="https://github.com/usnistgov/frvt">validation package</a> will be published
+in the upcoming weeks.
+All participants must run their software through the updated validation package
+prior to submission. The purpose of validation is to ensure consistent
+algorithm output between your execution and NIST’s execution. [last update:
+2022-08-29]</p>
+</div>
+<div id="encryption" class="section level3">
+<h3>Encryption</h3>
+<p>All submissions must be properly encrypted and signed before transmission to
+NIST. This must be done according to these
+<a href="https://www.nist.gov/system/files/documents/2021/10/25/nist_encryption.pdf">instructions</a> using the
+FRVT Ongoing public key linked from this
+<a href="https://www.nist.gov/itl/iad/image-group/products-and-services/encrypting-softwaredata-transmission-nist">page</a>.
+Participants must email their public key to NIST. The participant’s public key
+must correspond to the participant’s public-key fingerprint provided on the
+signed Participation Application. [last update: 2022-08-22]</p>
+</div>
+<div id="submission" class="section level3">
+<h3>Submission</h3>
+<p>Encrypted files below 20MB can be emailed to NIST at
+<a href="mailto:frvt@nist.gov">frvt@nist.gov</a>. Encrypted files above 20MB can be
+provided as a download link from a generic http webserver (e.g., Google Drive).
+We cannot accept Dropbox links. NIST will not register, or establish any kind
+of membership, on the provided website. Participants can submit their
+algorithm(s) as soon as the signed participation agreement is sent to NIST.
+There is no need to wait for NIST confirmation of the received agreement.
+Participants must <a href="mailto:frvt-news+subscribe@list.nist.gov">subscribe</a> to the
+FRVT mailing list to receive emails when new reports are published or
+announcements are made. [last update: 2022-08-29]</p>
 </details>
 <hr />
 <details open>
@@ -1987,6 +2042,7 @@ Related NIST Projects
 <p><br></p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
+</div>
 </div>
 
 
