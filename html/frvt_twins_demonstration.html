@@ -1938,10 +1938,12 @@ Status
 <h2>
 Purpose
 </h2>
-</summary>
+<p></summary>
 Many face recognition algorithms produce high false match rates (FMR) when comparing images of identical and same-sex
-fraternal twins. FMR is lower when comparing images of two unrelated persons of the same sex and age. The FRVT Twins
-Demonstration track is an ongoing opportunity for developers to demonstrate an ability to distinguish between twins.<br><br>
+fraternal twins. FMR is lower when comparing images of two unrelated persons of the same sex and age.
+As detailed in the <a href="https://pages.nist.gov/frvt/api/FRVT_Twins_Demo_concept_v1.pdf">concept</a> document,
+the FRVT Twins Demonstration track is an ongoing opportunity for developers to demonstrate an ability to distinguish between twins.</p>
+<p>
 Our quantitative goal is to state a false match rate (FMR) on twins that is a small multiple of FMR on unrelated persons. This
 should be achieved at decision thresholds (T) for which FMR<small><small>UNRELATED</small></small> ≤ 10<sup>-4</sup>, as is typical in one-to-one applications.
 </details>
@@ -1956,40 +1958,33 @@ To participate in this evaluation, developers need to submit a participation
 agreement to NIST, wrap their software behind the published C++ API, run their
 libraries through the provided validation package (which creates a submission
 package), encrypt the package, and provide a download link for the encrypted
-submission package. More details are provided below.</p>
-<div id="participation-agreement" class="section level3">
-<h3>Participation Agreement</h3>
-<p>All organizations who seek to participate in FRVT must sign and submit all
-pages of this <a href="https://www.nist.gov/document/frvtparticipationagreementpdf">Participation
-Agreement</a> and
-send a PDF scanned copy to <a href="mailto:frvt@nist.gov">frvt@nist.gov</a>.<br><br />
-[NOTE:] Organizations that have already submitted a participation agreement for FRVT
-Ongoing 1:1 do not need to send in a new participation agreement UNLESS the
-organization updates their cryptographic signing key. [last update: 2022-09-01]</p>
-</div>
-<div id="api-document" class="section level3">
-<h3>API Document</h3>
-<p>The demonstration track uses the identical <a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_11_api.pdf">API</a>,
+submission package.</p>
+<p>
+<b>[Participation agreement]</b>
+Organizations seeking to participate in FRVT must sign and submit all pages of this
+<a href="https://www.nist.gov/document/frvtparticipationagreementpdf">Participation Agreement</a>
+and send a PDF scanned copy to <a href="mailto:frvt@nist.gov">frvt@nist.gov</a>.
+Organizations that have already submitted to FRVT 1:1 do not need to send in a
+new participation agreement UNLESS the organization updates their cryptographic
+signing key. [last update: 2022-09-01]
+</p>
+<p>
+<p><b>[API]</b>
+The demonstration track uses the identical <a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_11_api.pdf">API</a>,
 rules, and participation processes of the <a href="https://pages.nist.gov/frvt/html/frvt11.html">FRVT 1:1 verification track</a>.
-All algorithms submitted must adhere to the published C++ API. <br></p>
-<ol style="list-style-type: decimal">
-<li>A link to the encrypted compiled software implementation of NIST’s <a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_11_api.pdf">API</a></li>
-<li>The core library shall be named as libfrvt_11_twins_&lt;provider&gt;_&lt;sequence&gt;.so</li>
-<li>An email that explicitly requests entry into the FRVT Twins Demonstration track</li>
-</ol>
-<p>[last update: 2022-09-01]</p>
-</div>
-<div id="validation" class="section level3">
-<h3>Validation</h3>
-<p>A <a href="https://github.com/usnistgov/frvt">validation package</a> will be published later.
+All algorithms submitted must adhere to the published C++ API. Developers must submit
+1. A link to the encrypted compiled software implementation of NIST’s <a href="https://pages.nist.gov/frvt/api/FRVT_ongoing_11_api.pdf">API</a>,
+2. The core library named as libfrvt_11_twins_&lt;provider&gt;_&lt;sequence&gt;.so, and
+3. An email that explicitly requests entry into the FRVT Twins Demonstration track. [last update: 2022-09-01]</p>
+<p>
+<p><b>[Validation]</b>
+The <a href="https://github.com/usnistgov/frvt">validation package</a> will be published later.
 All participants must run their software through the updated validation package
-prior to submission. The purpose of validation is to ensure consistent
-algorithm output between your execution and NIST’s execution. [last update:
-2022-09-01]</p>
-</div>
-<div id="encryption" class="section level3">
-<h3>Encryption</h3>
-<p>All submissions must be properly encrypted and signed before transmission to
+prior to submission. The purpose of validation is to ensure that NIST can exactly reproduce
+developer-submitted algorithm outputs. [last update: 2022-09-01]</p>
+<p>
+<p><b>[Encryption]</b>
+All submissions must be properly encrypted and signed before transmission to
 NIST. This must be done according to these
 <a href="https://www.nist.gov/system/files/documents/2021/10/25/nist_encryption.pdf">instructions</a> using the
 FRVT Ongoing public key linked from this
@@ -1997,10 +1992,9 @@ FRVT Ongoing public key linked from this
 Participants must email their public key to NIST. The participant’s public key
 must correspond to the participant’s public-key fingerprint provided on the
 signed Participation Application. [last update: 2022-08-22]</p>
-</div>
-<div id="submission" class="section level3">
-<h3>Submission</h3>
-<p>Encrypted files below 20MB can be emailed to NIST at
+<p>
+<p><b>[Submission]</b>
+Encrypted files below 20MB can be emailed to NIST at
 <a href="mailto:frvt@nist.gov">frvt@nist.gov</a>. Encrypted files above 20MB can be
 provided as a download link from a generic http webserver (e.g., Google Drive).
 We cannot accept Dropbox links. NIST will not register, or establish any kind
@@ -2040,7 +2034,7 @@ Related NIST Projects
 <a href="https://pages.nist.gov/frvt/html/frvt_morph.html">FRVT MORPH</a>
 </h5>
 <h5>
-<a href="https://pages.nist.gov/frvt/html/frvt_quality.html">FRVT Quality Summarization</a>
+<a href="https://pages.nist.gov/frvt/html/frvt_quality.html">FRVT Quality</a>
 </h5>
 <h5>
 <a href="https://pages.nist.gov/frvt/html/frvt_facemask.html">FRVT Face Mask Effects</a>
@@ -2054,7 +2048,6 @@ Related NIST Projects
 <p><br></p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
-</div>
 </div>
 
 
